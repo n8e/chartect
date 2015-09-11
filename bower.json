@@ -1,0 +1,31 @@
+{
+  "name": "project_charts",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andela-nmartin/project_charts.git"
+  },
+  "authors": [
+    "andela-nmartin <godmetweenciati@gmail.com>"
+  ],
+  "description": "front end",
+  "keywords": [
+    "work",
+    "with",
+    "charts"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.5",
+    "jade": "~1.11.0",
+    "less": "~2.5.1"
+  }
+}
