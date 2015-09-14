@@ -328,9 +328,9 @@ $(".coolbutton").click(function() {
     drawLineChart();
   });
   $("#histogram").click(function() {
-    drawHistogram()
+    drawHistogram();
   });
   $("#pie_chart").click(function() {
-    drawPieChart()
+    drawPieChart();
   });
 });

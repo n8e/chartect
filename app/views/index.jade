@@ -3,22 +3,28 @@ html(onload='')
   head
     title Data to Charts
     link(rel='stylesheet', type='text/css', href='css/styles.css')
+    link(rel='stylesheet', type='text/css', href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+    script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
   body
-    .headerDiv Charts Application
-    #arrayChoice
-      h3 Instructions
-      p Please input numbers separated by spaces
-      input#sevenElement(type='text')
-      br
-      input.coolbutton(type='button', value='PUSH' onclick='')
-    #div0
-      strong See Charts
-      br
-      .circleDiv(id='pie_chart') Pie Chart
-      .circleDiv(id='bar_chart') Bar Chart
-      .circleDiv(id='histogram') Histogram
-      .circleDiv(id='line_chart') Line Chart
-    #div1(style='width:400px;height:300px;border-left:1px solid;border-bottom:1px solid; ')
-    #div3
+    .container
+      .jumbotron 
+        h1 Charts Application
+        p @nateworks
+      .row
+        #arrayChoice
+          h3 Instructions
+          p Please input numbers separated by spaces
+          input#sevenElement(type='text')
+          br
+          input.coolbutton(type='button', value='PUSH' onclick='')
+        #div0
+          strong See Charts
+          br
+          .circleDiv(id='pie_chart') Pie Chart
+          .circleDiv(id='bar_chart') Bar Chart
+          .circleDiv(id='histogram') Histogram
+          .circleDiv(id='line_chart') Line Chart
+        #div1(style='width:400px;height:300px;border-left:1px solid;border-bottom:1px solid; ')
+        #div3
     script(type='text/javascript', src='js/index.js')
