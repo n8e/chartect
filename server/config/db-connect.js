@@ -1,5 +1,5 @@
 var Seq = require('sequelize'),
-    sequelize = new Seq('vvida', 'postgres', 'root', {
+    sequelize = new Seq('chartsjs', 'postgres', 'root', {
         host: 'localhost',
         dialect: 'postgres'
     });
