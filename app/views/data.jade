@@ -1,0 +1,20 @@
+md-dialog(aria-label='Add a table' ng-cloak='' style="width:200px")
+  md-card(md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}", md-theme-watch='')
+    md-card-title
+      md-card-title-text
+        span.md-headline Table Details
+        span.md-subhead Dimensions
+      i.large.material-icons(style="color:#000") code
+    md-card-actions(layout='row', layout-align='end center')
+      form(name='tableForm')
+        md-input-container.md-block
+          label(for="yUnits") Y Units: 
+          input(type="text" placeholder="Y Units" ng-model="yUnits" id="yUnits")
+        md-input-container.md-block
+          label(for="xUnits") X Units: 
+          input(type="text" placeholder="X Units" ng-model="xUnits" id="xUnits")
+        md-input-container.md-block
+          label(for="sample") Sample:
+          input(type="text" placeholder="Sample size" ng-model="sample" id="sample")
+        md-input-container.md-block
+          md-button.md-raised.md-primary Create model & Generate Input

@@ -1,0 +1,7 @@
+md-sidenav.md-sidenav-left(md-component-id='left', md-is-locked-open="$mdMedia('gt-md')", md-disable-backdrop='', md-whiteframe='4')
+  md-content(layout-padding='')
+    md-button.md-primary(ng-click='close()', hide-gt-md='')
+      | Close Menu
+    p(hide-md='', show-gt-md='')
+      i.large.material-icons(ng-click='showPrompt($event)' style="color:#e50000") add_circle
+        md-tooltip(md-direction="bottom") Add a table
