@@ -1,13 +1,18 @@
 (function() {
   'use strict';
   angular.module('charts.controllers', []);
+  angular.module('charts.directives', []);
   // require controllers
   require('./controllers/mainCtrl');
   require('./controllers/toolBarCtrl');
   require('./controllers/dataCtrl');
 
+  // require directives
+  require('./directives/dataRow');
+
   window.app = angular.module('charts', [
     'charts.controllers',
+    'charts.directives',
     'ui.router',
     'ngResource',
     'ngMaterial'

@@ -1,5 +1,6 @@
 angular.module('charts.controllers')
   .controller('MainCtrl', ['$rootScope', '$scope', '$mdDialog', '$mdMedia', '$timeout', '$mdSidenav', '$log', function($rootScope, $scope, $mdDialog, $mdMedia, $timeout, $mdSidenav, $log) {
+    console.log('rootScope', $rootScope);
     $scope.showPrompt = function(ev) {
       var useFullScreen = ($mdMedia('sm') || $mdMedia('xs')) && $scope.customFullscreen;
       $mdDialog.show({

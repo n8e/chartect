@@ -17,4 +17,4 @@ md-dialog(aria-label='Add a table' ng-cloak='' style="width:200px")
           label(for="sample") Sample:
           input(type="text" placeholder="Sample size" ng-model="sample" id="sample")
         md-input-container.md-block
-          md-button.md-raised.md-primary Create model & Generate Input
+          md-button.md-raised.md-primary(ng-click="saveUnits()") Create model & Generate Input

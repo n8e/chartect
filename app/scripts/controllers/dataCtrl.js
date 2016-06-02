@@ -1,6 +1,9 @@
 angular.module('charts.controllers')
-  .controller('DataCtrl', ['$rootScope', '$scope', function($rootScope, $scope) {
-    console.log($scope.yUnits);
-    console.log($scope.xUnits);
-    console.log($scope.sample);
+  .controller('DataCtrl', ['$rootScope', '$scope', '$mdDialog', function($rootScope, $scope, $mdDialog) {
+    $scope.saveUnits = function() {
+      $rootScope.yUnits = $scope.yUnits;
+      $rootScope.xUnits = $scope.xUnits;
+      $rootScope.sample = $scope.sample;
+      $mdDialog.hide();
+    };
   }]);
