@@ -1,16 +1,29 @@
 (function() {
   'use strict';
+
+  // modules
+  angular.module('charts.services', []);
   angular.module('charts.controllers', []);
   angular.module('charts.directives', []);
+
+  // require services
+  require('./services/dataService');
+
   // require controllers
   require('./controllers/mainCtrl');
   require('./controllers/toolBarCtrl');
   require('./controllers/dataCtrl');
+  require('./controllers/pieCtrl');
+  require('./controllers/lineCtrl');
+  require('./controllers/histogramCtrl');
+  require('./controllers/barCtrl');
 
   // require directives
   require('./directives/dataRow');
 
+  // define app
   window.app = angular.module('charts', [
+    'charts.services',
     'charts.controllers',
     'charts.directives',
     'ui.router',
@@ -24,8 +37,17 @@
         name: 'Data',
         state: 'data'
       }, {
-        name: 'Dashboard',
-        state: 'dashboard'
+        name: 'Pie Chart',
+        state: 'pie'
+      }, {
+        name: 'Bar Chart',
+        state: 'bar'
+      }, {
+        name: 'Line Chart',
+        state: 'line'
+      }, {
+        name: 'Histogram',
+        state: 'histogram'
       }];
 
       $rootScope.openLeftMenu = function() {
@@ -57,10 +79,25 @@
           controller: 'MainCtrl',
           templateUrl: 'views/home.html'
         })
-        .state('dashboard', {
-          url: '/dashboard',
-          controller: 'DashboardCtrl',
-          templateUrl: 'views/dashboard.html'
+        .state('pie', {
+          url: '/pie',
+          controller: 'PieCtrl',
+          templateUrl: 'views/pie.html'
+        })
+        .state('bar', {
+          url: '/bar',
+          controller: 'BarCtrl',
+          templateUrl: 'views/bar.html'
+        })
+        .state('line', {
+          url: '/line',
+          controller: 'LineCtrl',
+          templateUrl: 'views/line.html'
+        })
+        .state('histogram', {
+          url: '/histogram',
+          controller: 'HistogramCtrl',
+          templateUrl: 'views/histogram.html'
         });
       $locationProvider.html5Mode(true);
     }
