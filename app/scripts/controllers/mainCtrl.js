@@ -1,7 +1,6 @@
 angular.module('charts.controllers')
   .controller('MainCtrl', ['$rootScope', '$scope', '$mdDialog', '$mdMedia', '$timeout', '$mdSidenav', '$log',
     function($rootScope, $scope, $mdDialog, $mdMedia, $timeout, $mdSidenav, $log) {
-      console.log('rootScope', $rootScope);
       $scope.showPrompt = function(ev) {
         var useFullScreen = ($mdMedia('sm') || $mdMedia('xs')) && $scope.customFullscreen;
         $mdDialog.show({
@@ -71,6 +70,18 @@ angular.module('charts.controllers')
           .then(function() {
             $log.debug("close LEFT is done");
           });
+      };
+
+      $scope.saveData = function(sample, dataArray) {
+        sample = parseInt(sample);
+        for (var j = 1; j <= sample * 2; j++) {
+          var id = 'input_' + j;
+          if (j % 2 === 0) {
+            dataArray[Math.ceil(j / 2) - 1].y = document.getElementById(id).value;
+          } else {
+            dataArray[Math.ceil(j / 2) - 1].x = document.getElementById(id).value;
+          }
+        }
       };
     }
   ]);

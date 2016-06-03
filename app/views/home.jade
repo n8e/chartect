@@ -47,4 +47,5 @@
               label y
               input(type=text)
     md-input-container.md-block
-      md-button.md-raised.md-primary Save Data
+      md-button.md-raised.md-primary(ng-click="saveData(savedDimensions.sample, savedDimensions.dataArray)") Save Data
+    p Data Array: {{ savedDimensions.dataArray }}
