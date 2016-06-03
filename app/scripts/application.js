@@ -6,9 +6,6 @@
   angular.module('charts.controllers', []);
   angular.module('charts.directives', []);
 
-  // require services
-  require('./services/dataService');
-
   // require controllers
   require('./controllers/mainCtrl');
   require('./controllers/toolBarCtrl');
