@@ -22,7 +22,7 @@
         a(ng-href='/bar')
           i.large.material-icons(ng-click='' style="color:#e50000") view_quilt
             md-tooltip(md-direction="bottom") See Bar Chart
-  .guide(ng-hide="xUnits")
+  .guide(ng-hide="savedDimensions")
     md-card
       md-card-title
         h3 Let's get started
@@ -33,13 +33,13 @@
         | button. Click it and fill out the prompt to define the dimension units for your data.
         p
         | As soon as you save the dimensions in the prompt, an empty data table is generated for you to fill. Once filled, save the data.
-  .data-table(ng-show="xUnits")
+  .data-table(ng-show="savedDimensions")
     md-card
       md-card-title
-        h3 {{ yUnits }} table
+        h3 {{ savedDimensions.yUnits }} table
       md-card-content
         .data-row
-          div(layout="row" ng-repeat="i in sample")
+          div(layout="row" ng-repeat="entry in savedDimensions.dataArray")
             md-input-container
               label x
               input(type=text)
