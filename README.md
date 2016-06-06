@@ -1,4 +1,4 @@
-#Project_Charts
+#Project Charts Client (_AngularJS_)
 
 Run `bower install` and `npm install` on the command line to install the dependencies first.
 
