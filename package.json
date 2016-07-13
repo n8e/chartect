@@ -1,21 +1,23 @@
 {
-  "name": "project_charts",
+  "name": "chartect",
   "version": "1.0.0",
-  "description": "back end",
+  "description": "entire app",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/andela-nmartin/project_charts.git"
+    "url": "https://github.com/andela-nmartin/chartect_client.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
     "start": "gulp heroku:production"
   },
   "author": "nate",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "browser-sync": "^2.9.3",
     "browserify": "^11.1.0",
+    "dotenv": "^2.0.0",
     "express": "^4.13.3",
     "gulp": "^3.9.0",
     "gulp-bower": "0.0.10",
@@ -26,6 +28,8 @@
     "gulp-nodemon": "^2.0.4",
     "gulp-util": "^3.0.6",
     "jquery": "^2.1.4",
+    "mongoose": "^4.5.4",
+    "morgan": "^1.7.0",
     "path": "^0.11.14",
     "sequelize": "^3.8.0",
     "stringify": "^3.1.0",
