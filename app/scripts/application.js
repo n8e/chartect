@@ -6,9 +6,13 @@
   angular.module('charts.controllers', []);
   angular.module('charts.directives', []);
 
+  // require services
+  require('./services/dataService');
+  require('./services/labelsService');
+
   // require controllers
   require('./controllers/mainCtrl');
-  require('./controllers/toolBarCtrl');
+  require('./controllers/homeCtrl');
   require('./controllers/dataCtrl');
   require('./controllers/pieCtrl');
   require('./controllers/lineCtrl');
@@ -73,7 +77,7 @@
       $stateProvider
         .state('data', {
           url: '/',
-          controller: 'MainCtrl',
+          controller: 'HomeCtrl',
           templateUrl: 'views/home.html'
         })
         .state('pie', {
