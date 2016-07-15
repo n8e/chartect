@@ -5,6 +5,29 @@ html(lang='en' ng-app="charts")
   body
     main
       include shared/header
-      md-content(id="disp" ui-view)
+      md-sidenav.md-sidenav-left(md-component-id='left', md-is-locked-open="$mdMedia('gt-md')", md-disable-backdrop='', md-whiteframe='4', style="display:inline-block;")
+        md-content(layout-padding='', ng-controller="MainCtrl")
+          md-button.md-primary(ng-click='close()', hide-gt-md='')
+            | Close Menu
+          .menu-item(hide-md='', show-gt-md='')
+            i.large.material-icons(ng-click='showPrompt($event)' style="color:#e50000") add_circle
+              md-tooltip(md-direction="bottom") Add a table
+          .menu-item(hide-md='', show-gt-md='')
+            a(ng-href='/pie')
+              i.large.material-icons(style="color:#e50000") pie_chart
+                md-tooltip(md-direction="bottom") See Pie Chart
+          .menu-item(hide-md='', show-gt-md='')
+            a(ng-href='/line')
+              i.large.material-icons(ng-click='' style="color:#e50000") multiline_chart
+                md-tooltip(md-direction="bottom") See Line chart
+          .menu-item(hide-md='', show-gt-md='')
+            a(ng-href='/histogram')
+              i.large.material-icons(ng-click='' style="color:#e50000") timeline
+                md-tooltip(md-direction="bottom") See Histogram
+          .menu-item(hide-md='', show-gt-md='')
+            a(ng-href='/bar')
+              i.large.material-icons(ng-click='' style="color:#e50000") view_quilt
+                md-tooltip(md-direction="bottom") See Bar Chart
+      md-content(id="disp", style="display:inline-block;", ui-view)
   footer
     include shared/footer
