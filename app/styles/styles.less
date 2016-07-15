@@ -14,37 +14,74 @@ html {
     margin-top: 10px;
     background: #ffffff;
     main {
+      margin: 0 auto;
       min-height: 100%;
-    }
-    .dashdisplay {
-      height: 100%;
       md-sidenav {
+        float:left;
+        height: 760px;
+        width: 4%;
+        z-index: 9;
         i {
           font-size: 200%;
         }
         .menu-item {
-          min-height:130px;
+          min-height: 80%;
         }
       }
-    }
-    i {
-      color: #ffffff;
-    }
-    .data-form {
-      padding: 30px;
-      color: #3e3e3e;
-      width: 500px;
-    }
-    .add-table {
-      padding: 30px;
-      color: #3e3e3e;
-      width: 500px;
-    }
-    md-dialog {
-      min-width: 350px;
-    }
-    md-sidenav {
-      width: 60px;
+      #disp {
+        height: 760px;
+        margin-left: 1%;
+        width: 1080px;
+
+        .display-grid {
+          display: block;
+          height: 500px;
+          margin: 0 auto;
+          .y-coordinates {
+            p {
+              transform: rotate(90deg);
+              transform-origin: 4% 90%;
+            }
+            background-color: #bebebe;
+            display: inline-block;
+            height: 500px;
+            vertical-align: top;
+            width: 100px;
+          }
+          #chartDiv {
+            align-text: center;
+            background-color: #eeeeee;
+            display: inline-block;
+            height: 500px;
+            padding: 100;
+            width: 500px;
+          }
+        }
+        
+        .x-coordinates {
+          background-color: #bebebe;
+          display: block;
+          height: 60px;
+          text-align: center;
+          width: 600px;
+        }
+        .dashdisplay {
+          height: 100%;
+        }
+        i {
+          color: #ffffff;
+        }
+        .data-form {
+          padding: 30px;
+          color: #3e3e3e;
+          width: 500px;
+        }
+        .add-table {
+          padding: 30px;
+          color: #3e3e3e;
+          width: 500px;
+        }
+      }
     }
     .footer {
       margin-top: -100px;
@@ -65,6 +102,9 @@ html {
         left: 50%;
         padding: 20px;
       }
+    }
+    md-dialog {
+      min-width: 18%;
     }
   }
 }
