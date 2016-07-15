@@ -31,15 +31,13 @@ gulp.task('less', function() {
     .pipe(less({
       paths: [path.join(__dirname, './app/styles')]
     }))
-    .pipe(gulp.dest('./public/css'))
-    .pipe(browserSync.reload({ stream: true }));
+    .pipe(gulp.dest('./public/css'));
 });
 
 gulp.task('jade', function() {
   gulp.src(paths.jade)
     .pipe(jade())
-    .pipe(gulp.dest('./public/'))
-    .pipe(browserSync.reload({ stream: true }));
+    .pipe(gulp.dest('./public/'));
 });
 
 gulp.task('images', function() {
