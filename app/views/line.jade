@@ -1,1 +1,7 @@
-p We will have the line chart soon
+#container
+  button(ng-click="plotter()" style="background-color:#f00;color:#fff;height:30px;width:100px;") Display
+  .display-grid
+    .y-coordinates
+      p {{ units.y_units }} / {{ units.x_units }}
+    #chartDiv
+    .x-coordinates Line Chart
