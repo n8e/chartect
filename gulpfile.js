@@ -10,19 +10,6 @@ stringify = require('stringify');
 source = require('vinyl-source-stream');
 imagemin = require('gulp-imagemin');
 nodemon = require('gulp-nodemon');
-browserSync = require('browser-sync');
-
-gulp.task('browser-sync', function() {
-  browserSync({
-    server: {
-      baseDir: "./public/"
-    }
-  });
-});
-
-gulp.task('bs-reload', function() {
-  browserSync.reload();
-});
 
 paths = {
   public: 'public/**',
@@ -121,4 +108,4 @@ gulp.task('watchify', function() {
 gulp.task('build', ['jade', 'less', 'static-files', 'browserify', 'bower']);
 gulp.task('heroku:production', ['build']);
 gulp.task('production', ['nodemon', 'build']);
-gulp.task('default', ['nodemon', 'watch', 'build', 'browser-sync']);
+gulp.task('default', ['nodemon', 'watch', 'build']);
