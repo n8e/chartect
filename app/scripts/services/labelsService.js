@@ -1,7 +1,7 @@
 angular.module('charts.services')
   .service('labelsService', ['$resource',
     function($resource) {
-      var url = 'http://localhost:3000/api/labels/:id';
+      var url = '/api/labels/:id';
       var resource = $resource(url, {
         id: '@id'
       }, {

@@ -1,7 +1,7 @@
 angular.module('charts.services')
   .service('dataService', ['$resource',
     function($resource) {
-      var url = 'http://localhost:3000/api/datum/:id';
+      var url = '/api/datum/:id';
       var resource = $resource(url, {
         id: '@id'
       }, {
